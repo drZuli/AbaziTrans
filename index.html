@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abazi Trans | Reliable Transportation & Logistics Services</title>
+  <meta name="description" content="Professional transportation and logistics company based in North Macedonia and Switzerland. Road freight, warehousing, and supply chain solutions.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a2e;       /* Dark blue */
+      --secondary: #7c3aed;     /* Purple (brand color) */
+      --accent: #5b21b6;        /* Darker purple */
+      --light: #f5f3ff;         /* Light purple background */
+      --highlight: #ddd6fe;     /* Light purple highlight */
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: #333;
+      background-color: white;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                  url('https://www.albawaba.net/sites/default/files/styles/default/public/2021-12/Mercedes-Benz%20Oman%20-%205%20generations%20of%20Actros%20(1).jpg?itok=eB0Gq0Ws') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .logo-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .logo-text {
+      text-align: left;
+    }
+
+    .logo-main {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1;
+      color: white;
+    }
+
+    .logo-sub {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: white;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 5px 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--secondary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+
+    /* Services */
+    .services {
+      background-color: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2.5em;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+
+    /* Fleet */
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .vehicle-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .vehicle-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .vehicle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .vehicle-card:hover .vehicle-image img {
+      transform: scale(1.05);
+    }
+
+    .vehicle-details {
+      padding: 20px;
+    }
+
+    .vehicle-type {
+      color: var(--secondary);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Tracking */
+    .tracking {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .tracking h2 {
+      color: white;
+    }
+
+    .tracking h2:after {
+      background-color: var(--secondary);
+    }
+
+    .tracking-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .tracking-form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .tracking-form button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .tracking-form button:hover {
+      background-color: var(--accent);
+    }
+
+    /* Contact */
+    .contact-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info h3 {
+      color: var(--secondary);
+      margin-top: 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .contact-form button {
+      background-color: var(--secondary);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--secondary);
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--highlight);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--secondary);
+      color: var(--secondary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--secondary);
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 20px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+      
+      section {
+        padding: 50px 0;
+      }
+      
+      .contact-cols {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with Logo -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">AT</div>
+      <div class="logo-text">
+        <div class="logo-main">Abazi Trans</div>
+        <div class="logo-sub">Transport & Logistics</div>
+      </div>
+    </div>
+    <h1>Reliable Transportation Solutions</h1>
+    <p>Serving North Macedonia and Switzerland since 2012</p>
+    <div style="margin-top: 30px;">
+      <a href="#contact" class="btn">Get a Quote</a>
+      <a href="#tracking" class="btn btn-outline">Track Shipment</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#fleet">Our Fleet</a></li>
+      <li><a href="#tracking">Tracking</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Road Freight</h3>
+          <p>Domestic and international road transportation with reliable scheduling and real-time tracking.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Warehousing</h3>
+          <p>Secure storage solutions with inventory management and distribution services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>International Shipping</h3>
+          <p>Comprehensive logistics solutions for imports and exports across Europe.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚚</div>
+          <h3>Last Mile Delivery</h3>
+          <p>Efficient final delivery services for businesses and e-commerce.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧊</div>
+          <h3>Refrigerated Transport</h3>
+          <p>Temperature-controlled transportation for perishable goods.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Supply Chain Solutions</h3>
+          <p>Custom logistics planning to optimize your supply chain efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fleet -->
+    <section id="fleet">
+      <h2>Our Fleet</h2>
+      <div class="fleet-grid">
+        <div class="vehicle-card">
+          <div class="vehicle-image">
+            <img src="https://th.bing.com/th/id/R.5d31ed6002a2fdebc09c99427a79405a?rik=Sij2sHWz4JMyTQ&pid=ImgRaw&r=0" alt="Truck">
+          </div>
+          <div class="vehicle-details">
+            <div class="vehicle-type">Semi-Trailer Trucks</div>
+            <p>Capacity: 24 pallets<br>Max load: 24,000 kg<br>Equipped with GPS tracking</p>
+          </div>
+        </div>
+        <div class="vehicle-card">
+          <div class="vehicle-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/2019_Mercedes-Benz_Sprinter_314_CDi_2.1.jpg" alt="Van">
+          </div>
+          <div class="vehicle-details">
+            <div class="vehicle-type">Delivery Vans</div>
+            <p>Capacity: 6 pallets<br>Ideal for urban deliveries<br>Eco-friendly models available</p>
+          </div>
+        </div>
+        <div class="vehicle-card">
+          <div class="vehicle-image">
+            <img src="https://th.bing.com/th/id/OIP.N-Jk3KRWkkhFQxiNYUXvNAHaEK?rs=1&pid=ImgDetMain" alt="Refrigerated Truck">
+          </div>
+          <div class="vehicle-details">
+            <div class="vehicle-type">Refrigerated Trucks</div>
+            <p>Temperature range: -25°C to +25°C<br>Capacity: 18 pallets<br>24/7 monitoring</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracking -->
+    <section id="tracking" class="tracking">
+      <h2>Track Your Shipment</h2>
+      <div class="tracking-form">
+        <h3 style="color: var(--primary); margin-top: 0;">Enter Tracking Number</h3>
+        <input type="text" placeholder="ABZ123456789">
+        <button type="submit">Track Now</button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Abazi Trans</h2>
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p>Founded in 2012, Abazi Trans has grown from a local transportation provider to an international logistics company with operations in North Macedonia and Switzerland. As part of the Abazi Group, we maintain the highest standards of service and reliability.</p>
+        <p>Our advantages:</p>
+        <ul style="list-style: none; padding: 0; display: inline-block; text-align: left;">
+          <li>• Modern fleet with GPS tracking</li>
+          <li>• Experienced professional drivers</li>
+          <li>• 24/7 customer support</li>
+          <li>• Competitive pricing</li>
+          <li>• Customs clearance assistance</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-cols">
+        <div class="contact-info">
+          <h3>North Macedonia Office</h3>
+          <p><strong>Address:</strong> Industrial Zone, Tetovo 1200</p>
+          <p><strong>Phone:</strong> +389 44 123 456</p>
+          <p><strong>Email:</strong> macedonia@abazitrans.com</p>
+          <p><strong>Hours:</strong> Mon-Fri: 8:00-20:00</p>
+          
+          <h3 style="margin-top: 30px;">Switzerland Office</h3>
+          <p><strong>Address:</strong> Lagerstrasse 45, 8004 Zurich</p>
+          <p><strong>Phone:</strong> +41 44 123 45 67</p>
+          <p><strong>Email:</strong> zurich@abazitrans.com</p>
+          <p><strong>Hours:</strong> Mon-Fri: 8:00-18:00</p>
+        </div>
+        <div class="contact-form">
+          <h3>Request a Quote</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Company Name">
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+              <option value="">Service Needed</option>
+              <option>Road Freight</option>
+              <option>Warehousing</option>
+              <option>International Shipping</option>
+              <option>Last Mile Delivery</option>
+              <option>Other</option>
+            </select>
+            <textarea rows="5" placeholder="Shipment Details (origin, destination, cargo type, weight, etc.)"></textarea>
+            <button type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Abazi Trans</h3>
+          <p>Professional transportation and logistics services across Europe. Part of the Abazi Group family of companies.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#fleet">Our Fleet</a></li>
+            <li><a href="#tracking">Tracking</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul>
+            <li>North Macedonia: +389 44 123 456</li>
+            <li>Switzerland: +41 44 123 45 67</li>
+            <li>Emergency: +389 70 123 456</li>
+            <li>info@abazitrans.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Abazi Trans. Part of Abazi Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
